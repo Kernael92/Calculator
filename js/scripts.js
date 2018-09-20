@@ -8,15 +8,24 @@ $(document).ready(function() {
       var number2 = parseInt($("#add2").val());
       var result = add(number1, number2);
    $("#output").text(result);
+
    });
 });
 
-//var subtract = function(number1, number2) {
-//return number1 - number2;
-//};
-//var number1 = parseInt(prompt("Enter a number:"));
-//var number2 = parseInt(prompt("Enter another number:"));
-//alert(subtract(number1, number2));
+var subtract = function(number1, number2) {
+return number1 - number2;
+};
+$(document).ready(function() {
+   $("form#subtract").submit(function(event) {
+      event.preventDefault();
+      var number1 = parseInt($("#number1").val());
+      var number2 = parseInt($("#number2").val());
+      var result=subtract(number1, number2);
+   $("#output").text(result);
+});
+
+});
+
 //var multiply = function(number1, number2) {
 //return number1 * number2;
 //};
